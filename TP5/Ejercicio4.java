@@ -23,11 +23,29 @@ public class Ejercicio4{
         if(numeros==null)
             return;
         
-        if(numeros.size()<=posiciones.size()){
+        if(numeros.length < posiciones.length){
             return;
         }
-        
+        if(numeros.length == posiciones.length){
+            if(suma1==suma2){
+                return posiciones;
+            } 
+            return;
+        }
+        for (int i = indice; i < numeros.length; i++) {
 
+            //actual.add(numeros[i]);
+
+            //aca deberia decidir poner distintos valores a posiciones 
+            buscarSubconjuntosDisjuntos(
+                    numeros,
+                    posiciones,
+                    suma1, suma2,
+                    i + 1);
+
+            // BACKTRACKING
+            //actual.remove(actual.size() - 1);
+        }
 
 
     }
