@@ -1,51 +1,78 @@
 package proyectos.TP5;
 
+import java.util.Arrays;
+
+
 public class Ejercicio4{
 
-    public List<List<Integer>> ejercicio5(int[] numeros){
-        List<List<Integer>> result = new ArrayList<>();
+/*
+Partición de conjunto. Dado un conjunto de n enteros se desea encontrar, si existe, una partición en‬
+‭ dos subconjuntos disjuntos, tal que la suma de sus elementos sea la mism
+*/
 
-        int[] posiciones = new int[];
+    public int[] particionConjuntos(int[] numeros) {
 
-        this.buscarSubconjuntosDisjuntos(numeros, posiciones, 0, 0, 0);
+        int[] posiciones = new int[numeros.length];
 
-        //result.add??
-        return result;
+        boolean existe = buscarSubconjuntosDisjuntos(
+                numeros,
+                posiciones,
+                0,
+                0,
+                0);
+
+        if (existe) {
+            return posiciones;
+        }
+
+        return null;
+    }
+
+    private boolean buscarSubconjuntosDisjuntos(
+            int[] numeros,
+            int[] posiciones,
+            int index,
+            int suma1,
+            int suma2) {
+
+        
+        if (index == numeros.length) {
+            return suma1 == suma2;
+        }
+
+        int actual = numeros[index];
+
+        //camino uno en este caso va al subconjunto 1
+        posiciones[index] = 1;
+
+        if (buscarSubconjuntosDisjuntos(
+                numeros,
+                posiciones,
+                index + 1,
+                suma1 + actual,
+                suma2)) {
+
+            return true;
+        }
+
+        // pongo en subconjunto 2
+        posiciones[index] = 2;
+
+        if (buscarSubconjuntosDisjuntos(
+                numeros,
+                posiciones,
+                index + 1,
+                suma1,
+                suma2 + actual)) {
+
+            return true;
+        }
+
+        // backtracking
+        posiciones[index] = 0;
+
+        return false;
     }
 
 
-    private void buscarSubconjuntosDisjuntos(int[] numeros, int[] posiciones,
-        int suma1, int suma2, int index){
-        
-        if(index==numeros.size())
-            return;
-
-        if(numeros==null)
-            return;
-        
-        if(numeros.length < posiciones.length){
-            return;
-        }
-        if(numeros.length == posiciones.length){
-            if(suma1==suma2){
-                return posiciones;
-            } 
-            return;
-        }
-        for (int i = indice; i < numeros.length; i++) {
-
-            //actual.add(numeros[i]);
-
-            //aca deberia decidir poner distintos valores a posiciones 
-            buscarSubconjuntosDisjuntos(
-                    numeros,
-                    posiciones,
-                    suma1, suma2,
-                    i + 1);
-
-            // BACKTRACKING
-            //actual.remove(actual.size() - 1);
-        }
-
-
-    }
+}
