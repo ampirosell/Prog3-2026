@@ -14,12 +14,23 @@ Partición de conjunto. Dado un conjunto de n enteros se desea encontrar, si exi
 
         int[] posiciones = new int[numeros.length];
 
+        int sumaTotal = 0;
+        for(int n: numeros){
+            sumaTotal+=n;
+        }
+        
+        if(sumaTotal % 2 != 0){
+            return null;
+        }
+
+
         boolean existe = buscarSubconjuntosDisjuntos(
                 numeros,
                 posiciones,
                 0,
                 0,
-                0);
+                0,
+                sumaTotal/2);
 
         if (existe) {
             return posiciones;
@@ -33,12 +44,15 @@ Partición de conjunto. Dado un conjunto de n enteros se desea encontrar, si exi
             int[] posiciones,
             int index,
             int suma1,
-            int suma2) {
+            int suma2,
+            int mitadDeSuma) {
 
         
         if (index == numeros.length) {
             return suma1 == suma2;
         }
+        if(suma1>mitadDeSuma || suma2 > mitadDeSuma)
+            return false;
 
         int actual = numeros[index];
 
