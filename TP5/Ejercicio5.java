@@ -11,9 +11,10 @@ public class Ejercicio5{
 minimizar el tiempo de ejecución del total de tareas.‬
 ‭*/
 
-    public Map<Integer,List<String>> ejercicio5(int[] procesadoresId, 
-        String[] tareasNames){
+    public List<List<Map<String,Integer>>> ejercicio5(int cantidadProcesadores, 
+        Map<String, Integer> tareasNamesYTiempo){
 
+        
         return null;
     }
 
