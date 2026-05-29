@@ -1,4 +1,4 @@
-package proyectos.util;
+package Prog3-2026.util;
 
 public class Posicion {
 

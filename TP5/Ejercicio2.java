@@ -1,4 +1,4 @@
-package proyectos.TP5;
+package Prog3-2026.TP5;
 
 import proyectos.util.Casillero;
 import proyectos.util.Laberinto;

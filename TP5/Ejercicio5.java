@@ -1,4 +1,4 @@
-package proyectos.TP5;
+package Prog3-2026.TP5;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -60,16 +60,20 @@ minimizar el tiempo de ejecución del total de tareas.
             // asignar tarea al procesador p
             cargas[p] += tareas[index];
 
-            asignacionActual[index] = p;
+            if(cargas[p] < mejorTiempo) {
 
-            asignarProcesos(
-                    tareas,
-                    index + 1,
-                    cargas,
-                    asignacionActual);
+                asignacionActual[index] = p;
 
-            // BACKTRACKING
-            cargas[p] -= tareas[index];
+                asignarProcesos(
+                        tareas,
+                        index + 1,
+                        cargas,
+                        asignacionActual);
+
+                // BACKTRACKING
+                cargas[p] -= tareas[index];
+            }
+
         }
     }
 
