@@ -1,5 +1,8 @@
 package Prog3-2026.TP6;
 
+import Prog3-2026.util.ObjetoMochila;
+import java.util.Arrays;
+
 public class Ejercicio2 {
 
     /*Problema de la mochila: Se tienen n objetos y una mochila. Para i = 1,2,..n, el objeto i tiene un peso
@@ -9,6 +12,43 @@ limitación de capacidad impuesta. Los objetos pueden ser fraccionados, si una f
 del objeto i es ubicada en la mochila contribuye en xipi al peso total de la mochila y en xivi al valor
 de la carga.*/
 
+    public double[] getCantidadPorObjeto(ObjetoMochila[] objetos, double pesoDisponible){
+        if(pesoDisponible<=0){
+            return null;
+        }
+
+        double[] cantidadObjetos = new double[objetos.length];
+
+        //primero ordenar los objetos por valorPorKg...
+
+        Arrays.sort(objetos,
+                (o1, o2) -> Double.compare(
+                        o2.getValor()/o2.getPesoKG(),
+                        o1.getValor()/o1.getPesoKG()
+                ));
+        //luego...
+
+        for(int i=0;i<cantidadObjetos.length;i++){
+
+            ObjetoMochila objeto = objetos[i];
+
+            if(objeto.getPesoKG()>0){
+                
+                if(objeto.getPesoKG() <= pesoDisponible){
+                    cantidadObjetos[i]=1.0;
+                    pesoDisponible-=objeto.getPesoKG();
+                }else {
+                    cantidadObjetos[i] =
+                            pesoDisponible / objeto.getPesoKG();
+                }
+
+
+            }
+
+        }
+
+        return cantidadObjetos;
+    }
 
 
     
