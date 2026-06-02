@@ -8,6 +8,9 @@ public class ObjetoMochila {
 
     public ObjetoMochila(String nombreObjeto, double pesoKG, double valor){
         this.nombreObjeto = nombreObjeto;
+        if(valor<0 || pesoKG<0){
+            throw new IllegalArgumentException("Peso o valor negativo.");
+        }
         this.pesoKG = pesoKG;
         this.valor = valor;
     }
