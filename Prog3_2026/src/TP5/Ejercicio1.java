@@ -1,4 +1,6 @@
-package Prog3_2026.TP5;
+package TP5;
+
+import Prog3_2026.util.GrafoDirigido;
 
 import java.util.*;
 
@@ -47,7 +49,7 @@ public class Ejercicio1<T> {
         else {
 
             Iterator<T> adyacentes =
-                    grafo.obtenerAdyacentes(actual);
+                    (Iterator<T>) grafo.obtenerAdyacentes((Integer) actual);
 
             while (adyacentes.hasNext()) {
 
@@ -68,7 +70,7 @@ public class Ejercicio1<T> {
 
                     // BACKTRACKING
                     visitados.remove(siguiente);
-                    caminoActual.remove(caminoActual.size() - 1);
+                    caminoActual.removeLast();
                 }
             }
         }

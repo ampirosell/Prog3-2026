@@ -1,6 +1,7 @@
-package Prog3_2026.TP6;
+package TP6;
 
-import Prog3_2026.util.ObjetoMochila;
+import util.ObjetoMochila;
+
 import java.util.Arrays;
 
 public class Ejercicio2 {

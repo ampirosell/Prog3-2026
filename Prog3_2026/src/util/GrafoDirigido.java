@@ -1,4 +1,4 @@
-package Prog3_2026.util;
+package util;
 
 import java.util.*;
 
@@ -7,7 +7,7 @@ public class GrafoDirigido<T> implements Grafo<T> {
     // Cada vértice tiene una lista de arcos salientes
     private Map<Integer, List<Arco<T>>> adyacencias;
 
-    public GrafoDirigidoMap() {
+    public GrafoDirigido() {
         this.adyacencias = new HashMap<>();
     }
 

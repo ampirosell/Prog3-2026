@@ -1,6 +1,6 @@
-package Prog3_2026.TP5;
+package TP5;
 
-import Prog3_2026.util.*;
+import util.*;
 
 import java.util.ArrayList;
 import java.util.HashSet;

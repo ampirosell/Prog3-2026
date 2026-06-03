@@ -1,6 +1,7 @@
-package Prog3_2026.TP5;
+package TP5;
 
-import Prog3_2026.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Ejercicio3 {
     /*Dados n números positivos distintos, se desea encontrar todas las
@@ -11,7 +12,7 @@ public class Ejercicio3 {
         List<List<Integer>> resultadosList = new ArrayList<>();
         List<Integer> actual = new ArrayList<>();
 
-        buscarCombinaciones que sumen(M, numeros,0,0, resultadosList, actual);
+        buscarCombinaciones(M, numeros,0,0, resultadosList, actual);
         return resultadosList;
 
     }
@@ -41,9 +42,8 @@ public class Ejercicio3 {
                     actual);
 
             // BACKTRACKING
-            actual.remove(actual.size() - 1);
+            actual.removeLast();
         }
     }
 
-    }
 }

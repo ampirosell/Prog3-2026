@@ -1,4 +1,4 @@
-package Prog3_2026.TP6;
+package util;
 
 public class ObjetoMochila {
 

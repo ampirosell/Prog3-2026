@@ -1,4 +1,4 @@
-package Prog3_2026.TP6;
+package TP6;
 
 public class Ejercicio1 {
 

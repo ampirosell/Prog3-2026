@@ -1,7 +1,6 @@
-package Prog3_2026.TP5;
+package TP5;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Arrays;
 
 public class Ejercicio5{
 

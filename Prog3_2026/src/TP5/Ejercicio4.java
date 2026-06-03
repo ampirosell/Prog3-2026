@@ -1,4 +1,4 @@
-package Prog3_2026.TP5;
+package TP5;
 
 import java.util.Arrays;
 

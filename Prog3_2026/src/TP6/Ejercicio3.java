@@ -1,6 +1,6 @@
 package TP6;
 
-import Prog3_2026.util.Actividad;
+import util.Actividad;
 
 import java.util.ArrayList;
 import java.util.List;

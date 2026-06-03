@@ -1,6 +1,7 @@
-package Prog3_2026.util;
+package util;
 
-import java.Timestamp;
+
+import java.sql.Timestamp;
 
 public class Actividad {
 

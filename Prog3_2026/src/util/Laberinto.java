@@ -1,4 +1,4 @@
-package Prog3_2026.util;
+package util;
 
 import java.util.HashMap;
 
@@ -52,7 +52,7 @@ public class Laberinto {
 
 
 
-    public Posicion getPosicion(Casillero buscado) {
+    public Prog3_2026.util.Posicion getPosicion(Casillero buscado) {
 
         for (Integer fila :
                 casilleroXFilaXColumna.keySet()) {
@@ -67,7 +67,7 @@ public class Laberinto {
 
                 if (actual.equals(buscado)) {
 
-                    return new Posicion(
+                    return new Prog3_2026.util.Posicion(
                             fila,
                             columna);
                 }
