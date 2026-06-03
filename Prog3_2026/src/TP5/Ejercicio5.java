@@ -1,4 +1,4 @@
-package Prog3-2026.TP5;
+package Prog3_2026.TP5;
 
 import java.util.ArrayList;
 import java.util.HashMap;

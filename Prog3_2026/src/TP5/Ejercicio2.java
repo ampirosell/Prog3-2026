@@ -1,8 +1,8 @@
-package Prog3-2026.TP5;
+package Prog3_2026.TP5;
 
-import Prog3-2026.util.Casillero;
-import Prog3-2026.util.Laberinto;
-import Prog3-2026.util.Posicion;
+import Prog3_2026.util.Casillero;
+import Prog3_2026.util.Laberinto;
+import Prog3_2026.util.Posicion;
 
 import java.util.ArrayList;
 import java.util.HashSet;

@@ -1,6 +1,6 @@
-package Prog3-2026.TP5;
+package Prog3_2026.TP5;
 
-import Prog3-2026.util.*;
+import Prog3_2026.util.*;
 
 public class Ejercicio3 {
     /*Dados n números positivos distintos, se desea encontrar todas las
