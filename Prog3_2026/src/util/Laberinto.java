@@ -52,7 +52,7 @@ public class Laberinto {
 
 
 
-    public Prog3_2026.util.Posicion getPosicion(Casillero buscado) {
+    public Posicion getPosicion(Casillero buscado) {
 
         for (Integer fila :
                 casilleroXFilaXColumna.keySet()) {
@@ -67,7 +67,7 @@ public class Laberinto {
 
                 if (actual.equals(buscado)) {
 
-                    return new Prog3_2026.util.Posicion(
+                    return new Posicion(
                             fila,
                             columna);
                 }

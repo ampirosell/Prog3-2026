@@ -3,6 +3,7 @@ package TP6;
 import util.Actividad;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Ejercicio3 {
@@ -20,6 +21,19 @@ consiste en encontrar la cantidad máxima de actividades compatibles entre sí.*
         }
 
         List<Actividad> result = new ArrayList<>();
+
+
+        //las ordeno por fecha fin, la que primero termina hasta la ultima
+        
+        actividadesList.sort(
+                Comparator.comparing(
+                        Actividad::getFechaFin
+                ).reversed()
+        );
+
+
+
+        //to be continued...
 
         return null;
     }
