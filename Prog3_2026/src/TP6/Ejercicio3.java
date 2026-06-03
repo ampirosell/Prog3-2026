@@ -1,7 +1,9 @@
-package Prog3_2026.TP6;
+package TP6;
 
-import util.Actividad;
+import Prog3_2026.util.Actividad;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Ejercicio3 {
 
@@ -12,13 +14,14 @@ actividad i es seleccionada se llevará a cabo durante el intervalo [ci, fi). La
 compatibles si los intervalos [ci, fi) y [cj, fj) no se superponen (es decir, ci > fj o cj > fi). El problema
 consiste en encontrar la cantidad máxima de actividades compatibles entre sí.*/
 
-    public List<Actividad> maximaCantidadActividadesCompatibles(List<Actividades> actividadesList){
+    public List<Actividad> maximaCantidadActividadesCompatibles(List<Actividad> actividadesList){
         if(actividadesList==null){
             return null;
         }
 
         List<Actividad> result = new ArrayList<>();
 
+        return null;
     }
 
 }
