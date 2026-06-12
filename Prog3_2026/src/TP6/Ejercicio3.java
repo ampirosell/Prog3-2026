@@ -24,13 +24,16 @@ consiste en encontrar la cantidad máxima de actividades compatibles entre sí.*
 
 
         //las ordeno por fecha fin, la que primero termina hasta la ultima
-        
         actividadesList.sort(
                 Comparator.comparing(
                         Actividad::getFechaFin
                 ).reversed()
         );
 
+        result.add(actividadesList.get(0));
+        for(int i=1;i<actividadesList.size();i++){
+
+        }
 
 
         //to be continued...
